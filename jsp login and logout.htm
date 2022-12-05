@@ -1,0 +1,77 @@
+JSP SIGNUP:
+
+<%@ page import="java.sql.*"%>
+<%
+String name=request.getParameter("name");
+String password=request.getParameter("password");
+String confirmpassword=request.getParameter("confirmpassword");
+try {
+Class.forName("com.mysql.jdbc.Driver");
+Connection 
+conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/iplpro","root","");
+PreparedStatement ps=conn.prepareStatement("insert into 
+project(name,password,confirmpassword) values(?,?,?);");
+ ps.setString(1,name);
+ps.setString(2,password);
+ps.setString(3,confirmpassword);
+int x=ps.executeUpdate();
+if(x>0)
+{ 
+String site= new String("index.html");
+response.setStatus(response.SC_MOVED_TEMPORARILY);
+response.setHeader("Location",site);
+}
+else
+{
+out.println("failed!!! Try again");
+}
+}catch(Exception e){
+out.println(e);
+}
+%>
+  
+JSP LOGIN:
+  
+  
+<%@ page import="java.sql.*"%>
+<%@ page import="java.sql.ResultSet"%>
+<%@ page import="java.sql.Statement"%>
+<%@ page import="java.sql.Connection"%>
+<%
+String id=request.getParameter("userid");
+String driver="com.mysql.jdbc.Driver";String connectionUrl="jdbc:mysql://localhost:3306/";
+String database="iplpro";
+String userid="root";
+String password="";
+try{
+Class.forName(driver);
+}
+catch(ClassNotFoundException e){
+e.printStackTrace();
+}
+ Connection connection=null;
+ Statement statement=null;
+ ResultSet resultset=null;
+%>
+<%
+try {
+ connection=DriverManager.getConnection(connectionUrl+database,userid, password);
+ statement=connection.createStatement();
+ String sql="select name, password from project";
+ resultset=statement.executeQuery(sql);
+if(resultset.next())
+{
+resultset.getString("name");
+resultset.getString("password");
+String site= new String("crew_home.html");
+response.setStatus(response.SC_MOVED_TEMPORARILY);
+response.setHeader("Location",site);
+}
+else
+{
+out.println("give correct ");
+}
+}catch(Exception e){
+e.printStackTrace();
+}
+%>
