@@ -1,0 +1,103 @@
+HOME PAGE:
+<!DOCTYPE html>
+<html>
+<head>
+<title>SUCCESS_CREW</title>
+<link rel="stylesheet" type="text/css" href="css/crew_home_css.css">
+<style>
+.bn{
+background-color:blue;
+color:white;
+font-weight:bolder;
+padding:10px 20px;
+text-align:center;
+display:inline-block;
+letter-spacing:1px;
+border-radius:20px;
+width:150px;
+height:63px;
+float:right;
+font-size:19px;
+cursor:pointer;
+border:none;
+}
+img
+{
+float:left;
+border-radius:25px;
+}
+#anc{text-decoration:none;
+color:white;
+}
+h1{
+font-family:forte;
+font-size:48px;
+color:green;
+float:left;
+}
+</style>
+<script type="text/javascript">
+function functions(){
+var s=document.getElementById("search").value;
+if(s=="c")
+{
+window.open("csk.html");
+}
+else if(s=="m")
+{
+window.open("matches.html");
+}
+else if(s=="news")
+{
+window.open("news.html");
+}
+else if(s=="h")
+{
+window.open("highlights.html");
+}
+else
+{
+alert("Sorry! This is not here!");
+}
+}
+</script>
+</head>
+<body>
+<div class="second">
+<a href="crew_home.html"><img src="logo.jpg" width="300" height="63"></a>
+<h1 style="text-shadow:0 0 3px, 0 0 1px;">&nbsp;&nbsp;SUCCESSIVE CREW.COM</h1>
+<form class="search-form">
+<input type="text" name="search" placeholder=" search here..." id="search" 
+onkeyup="functions();" style="outline:none;">
+</form>
+<button class="bn"><a id="anc" href="logout.html">LOGOUT</a></button>
+</div>
+<ul>
+<li class="active"><a href="crew_home.html">&emsp;&emsp;HOME</a></li>
+<li><a href="#">&emsp;&emsp;TEAMS</a> <ul>
+<li><a href="csk.html">CSK</a></li>
+<li><a href="Mumbai Indians.html">MI</a></li>
+<li><a href="delhi.html">DC</a></li>
+<li><a href="punjab.html">KXIP</a></li>
+<li><a href="knight.html">RR</a></li>
+<li><a href="kingsxi.html">RRCB</a></li>
+<li><a href="kingsxi.html">RCB</a></li>
+<li><a href="kingsxi.html">KKR</a></li>
+</ul>
+</li>
+<li><a href="matches1.html">&emsp;MATCHES</a></li>
+<li><a href="highlights.html">HIGHLIGHTS</a></li>
+<li><a href="videos.html">&emsp;&nbsp;VIDEOS</a></li>
+<li><a href="news.html">&emsp;&emsp;NEWS</a></li>
+</ul>
+<div class="bubble">
+<img src="css/bubble.png">
+<img src="css/bubble.png">
+<img src="css/bubble.png">
+<img src="css/bubble.png">
+<img src="css/bubble.png">
+<img src="css/bubble.png">
+<img src="css/bubble.png">
+</div>
+</body>
+</html>
