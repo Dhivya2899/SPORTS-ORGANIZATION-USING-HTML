@@ -1,0 +1,136 @@
+MATCHES:
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+box-sizing: border-box;}
+body
+{
+background-image:url("black.jpg");background-image:inside;background-repeat:norepeat;background-attachment:fixed;background-size:cover;background-position:center;
+}
+.bn{
+background-color:lightblue;color:white;font-weight:bold;width:110px;letterspacing:1px;height:45px;float:left;font-size:19px;cursor:pointer;padding:10px;transition:all 0.5s;}
+#sub
+{
+margin-left:90px;font-size: 16px;background: linear-gradient(#ffbc00 5%, #ffdd7f 100%); 
+border: 1px solid #e5a900;color: #4E4D4B; font-weight: bold; cursor: pointer; 
+width:110px;height:35px; border-radius: 5px; padding: 5px 0; outline:none;}}
+.main {
+max-width: 1000px;margin: auto;}
+p1 {
+font-size: 50px;word-break: break-all;}
+p2 {
+font-size: 50px;word-break: break-all;}
+.row {
+margin: 10px -16px;}
+.row,.row > .column {padding: 8px;}
+.column {
+float: left;width: 33.33%;display: none; }
+.row:after {content: "";display: table;clear: both;}
+.content {
+background-color: white;padding: 10px;}
+.show {display: block;}
+.btn {
+border: none;outline: none;padding: 12px 16px;background-color: white;cursor: pointer;}
+.btn:hover {
+background-color: #ddd;}.btn.active {
+background-color: #666;color: white;}
+p.a{
+font: italic small-caps bold 16px/32px Georgia, serif;}
+</style></head><body>
+<ul type="none">
+<li><left><a href="crew_home.html"><img src="logo.jpg" id="new" width="250" height="63" 
+style="border:1px solid blue; border-radius:20px;"></a><font color="white"><p1 class="a">2020 
+IPL MATCHES</p1></font></center></li>
+<hr><div id="myBtnContainer">
+<button class="btn" color="pink" onclick="filterSelection('schedule')"> 
+SCHEDULE</button></div>
+<ul type="none">
+<li align="left"><img src="match1.jpg"></a>&emsp;<img src="match2.jpg">&emsp;<img 
+src="match3.jpg">&emsp;<img src="match4.jpg">&emsp;<img src="match5.jpg">&emsp;
+<img src="match6.jpg">&emsp;<img src="match7.jpg">&emsp;<img src="match8.jpg">&emsp;
+<img src="match9.jpg">&emsp;<img src="match10.jpg">&emsp;<img 
+src="match11.jpg">&emps;<img src="match12.jpg">&emps;<h3>SCHEDULE</h3>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+var x, i;
+x = document.getElementsByClassName("column");
+if (c == "all") c = "";
+for (i = 0; i < x.length; i++) {
+w3RemoveClass(x[i], "show");
+if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+}}
+function (element, name) {
+var i, arr1, arr2;
+arr1 = element.className.split(" ");
+arr2 = name.split(" ");
+for (i = 0; i < arr2.length; i++) {
+if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}}
+}function (element, name) {
+var i, arr1, arr2;
+arr1 = element.className.split(" ");
+arr2 = name.split(" ");
+for (i = 0; i < arr2.length; i++) {
+while (arr1.indexOf(arr2[i]) > -1) {
+arr1.splice(arr1.indexOf(arr2[i]), 1);}}
+element.className = arr1.join(" ");}
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function(){
+var current = document.getElementsByClassName("active");
+current[0].className = current[0].className.replace(" active", "");
+this.className += " active";});}</script><a href="match_details.html"><h1 color ="white" style="textalign:left;">MATCH_DETAILS:</h1></a></body></html>
+
+MATCH DETAILS:
+
+
+<html><head>
+<title>Matches</title>
+<link rel="stylesheet" type="text/css" href="css\matchescss.css">
+<style>
+body
+{
+background-image:url("ipl2.jpg");background-image:inside;background-repeat:no-repeat;
+background-attachment:fixed;background-size:cover;background-position:center;}
+.bn{
+background-color:lightblue;color:white;font-weight:bold;width:110px;letter-spacing:1px;
+height:45px;float:left;font-size:19px;cursor:pointer;padding:10px;}
+#anc{text-decoration:none;color:white;}</style></head>
+<body>
+<left><a href="crew_home.html"><img src="logo.jpg" id="new" width="250" height="63" 
+style="border:1px solid blue; border-radius:20px;"></a><font color="white"><p1 class="a">2020 
+IPL MATCHES</p1></font></center>
+<h1 class="one" color="red">&nbsp;MUMBAI INDIANS VS CHENNAI SUPER KINGS</h1>
+&emsp;MI 162/9 20.0 VS CSK 166/5 19.2 OV
+<h2>&emsp;CHENNAI SUPER KINGS BEAT MUMBAI INDIANS BY 5 WICKETS</h2>
+<h1 class="one">&nbsp;DELHI CAPITALS VS KINGS XI PUNJAB</h4>
+&emsp;DELHI CAPITALS VS KINGS XI PUNJAB
+<h2>&emsp;DELHI CAPITALS TIED WITH KINGS XI PUNJAB (DELHI CAPITALS WIN 
+SUPER OVER BY 2 WICKETS)</h2>
+<h1 class="one">&nbsp;ROYAL CHALLENGERS BANGALORE VS SUNRISERS 
+HYDERABAD</h4>
+&emsp;RCB 163/5 20.0 OV VS SRH 153 19.4 OV
+<h2>&emsp;ROYAL CHALLENGERS BANGALORE BEAT SUNRISERS HYDERABAD BY 
+10 RUNS</h3>
+<h1 class="one">&nbsp;RAJASTHAN ROYALS VS CHENNAI SUPER KINGS</h5>
+&emsp;RR
+216/7 20.0 OV VS CSK 200/6 20.0 OV
+<h2>&emsp;RAJASTHAN ROYALS BEAT CHENNAI SUPER KINGS BY 16 RUNS</h3>
+<h1 class="one">&nbsp;MUMBAI INDIANS VS KOLKATA KNIGHT RIDERS</h1>
+&emsp;MI
+195/5 20.0 OV VS KKR 146/9 20.0 OV
+<h2>&emsp;MUMBAI INDIANS BEAT KOLKATA KNIGHT RIDERS BY 49 RUNS</h2>
+<h1 class="one">&nbsp;MUMBAI INDIANS VS SUNRISERS HYDREBAD</h1>
+&emsp;MI 208/5 20.0 OV VS SRH 174/7 20.0 OV
+<h2>&emsp;MUMBAI INDIANS BEAT SUNRISERS HYDREBAD BY 34 RUNS</h3>
+<h1 class="one">&nbsp;KINGS XI PUNJAB VS CHENNAI SUPER KINGS</h1>
+KXIP 178/4 20.0 OV VS CSK 181/0 17.0 OV
+<h2>&emsp;CHENNAI SUPER KINGS BEAT KINGS XI PUNJAB BY 10 WICKETS</h2>
+<h1 class="one">&nbsp;ROYAL CHALLENGERS BANGALORE VS DELHI CAPITALS</h1>
+&emsp;DC 196/4 20.0 OV VS RCB 137/9 20.0 OV<h2>&emsp;DELHI CAPITALS BEAT ROYAL CHALLENGERS BANGALORE BY 59 
+RUNS</h2></body></html>
